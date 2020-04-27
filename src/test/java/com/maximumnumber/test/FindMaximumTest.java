@@ -5,27 +5,28 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FindMaximumTest {
-    FindMaximum findMaximum=new FindMaximum();
+
+    FindMaximum findMaximum = new FindMaximum();
 
     //UseCase-1
     //TC-1.1
     @Test
     public void givenMaximumNumber_atFirstPosition_shouldReturnFirstNumber() {
-        Comparable maximumNumber=findMaximum.findMaximumNumber(80,50,30);
-        Assert.assertEquals(80,maximumNumber);
+        Comparable maximumNumber = findMaximum.findMaximumValue(80, 50, 30);
+        Assert.assertEquals(80, maximumNumber);
     }
 
     //TC-1.2
     @Test
     public void givenMaxInteger_atSecondPosition_shouldReturnSecondPosition() {
-        Comparable maximumNumber=findMaximum.findMaximumNumber(50,80,30);
-        Assert.assertEquals(80,maximumNumber);
+        Comparable maximumNumber = findMaximum.findMaximumValue(50, 80, 30);
+        Assert.assertEquals(80, maximumNumber);
     }
 
     //TC-1.3
     @Test
     public void givenMaxInteger_atThirdPosition_shouldReturnThirdPosition() {
-        Comparable maximumNumber = findMaximum.findMaximumNumber(30, 50, 80);
+        Comparable maximumNumber = findMaximum.findMaximumValue(30, 50, 80);
         Assert.assertEquals(80, maximumNumber);
     }
 
@@ -33,21 +34,21 @@ public class FindMaximumTest {
     //TC:2.1
     @Test
     public void givenMaxFloat_atFirstPosition_shouldReturnFirstPosition() {
-        Comparable maximumNumber = findMaximum.findMaximumNumber(80.6,50.8,30.2);
+        Comparable maximumNumber = findMaximum.findMaximumValue(80.6, 50.8, 30.2);
         Assert.assertEquals(80.6, maximumNumber);
     }
 
     //TC:2.2
     @Test
     public void givenMaximumFloat_atSecondPosition_shouldReturnFirstPosition() {
-        Comparable maximumNumber = findMaximum.findMaximumNumber(30.2,80.6,50.8);
+        Comparable maximumNumber = findMaximum.findMaximumValue(30.2, 80.6, 50.8);
         Assert.assertEquals(80.6, maximumNumber);
     }
 
     //TC:2.3
     @Test
     public void givenMaxFloat_atThirdPosition_shouldReturnFirstPosition() {
-        Comparable maximumNumber = findMaximum.findMaximumNumber(30.2, 50.8, 80.6);
+        Comparable maximumNumber = findMaximum.findMaximumValue(30.2, 50.8, 80.6);
         Assert.assertEquals(80.6, maximumNumber);
     }
 
@@ -55,22 +56,21 @@ public class FindMaximumTest {
     //TC:3.1
     @Test
     public void givenMaximumStringAtFirstPosition_shouldReturnFirstPosition() {
-        String maximumString=findMaximum.findMaximumString("seema","hello","abc");
-        Assert.assertEquals("seema",maximumString);
+        Comparable maximumString=findMaximum.findMaximumValue("seema","hello","abc");
+        Assert.assertEquals("seema", maximumString);
     }
 
     //TC:3.2
     @Test
     public void givenMaximumStringAtSecondPosition_shouldReturnSecondPosition() {
-        String maximumString=findMaximum.findMaximumString("abc","seema","hello");
-        Assert.assertEquals("seema",maximumString);
+        Comparable maximumString = findMaximum.findMaximumValue("abc", "seema", "hello");
+        Assert.assertEquals("seema", maximumString);
     }
 
     //TC:3.3
     @Test
-    public void givenMaximumStringAtThirdPositiom_shouldReturnThirdPosition()
-    {
-        String maximumString=findMaximum.findMaximumString("hello","abc","seema");
-        Assert.assertEquals("seema",maximumString);
+    public void givenMaximumStringAtThirdPositiom_shouldReturnThirdPosition() {
+        Comparable maximumString = findMaximum.findMaximumValue("hello", "abc", "seema");
+        Assert.assertEquals("seema", maximumString);
     }
 }

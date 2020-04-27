@@ -1,8 +1,42 @@
 package com.maximumnumber;
 
-public class FindMaximum {
+public class FindMaximum < V extends Comparable <V> > {
 
-    //Method to Find Maximum Number Between three Integer Numbers
+    //class parameter
+    V firstValue;
+    V secondValue;
+    V thirdValue;
+
+    //Default Constructor
+    public FindMaximum() {
+
+    }
+
+    //Paramerized Constructor
+    public FindMaximum(V firstValue, V secondValue, V thirdValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = thirdValue;
+    }
+
+    public V findMaximumValue(V firstValue, V secondValue, V thirdValue) {
+        V maximumValue = firstValue;
+        if (secondValue.compareTo(maximumValue) > 0) {
+            maximumValue = secondValue;
+        }
+        if (thirdValue.compareTo(maximumValue) > 0) {
+            maximumValue = thirdValue;
+        }
+        return maximumValue;
+    }
+
+    //Main method
+    public static void main(String args[]) {
+        System.out.println("Findout Maximum number");
+    }
+}
+
+    /*//Method to Find Maximum Number Between three Integer Numbers
     public static int findMaximumNumber(int firstNumber,int secondNumber,int thirdNumber) {
         int maximumNumber=0;
         if(firstNumber>secondNumber && firstNumber>thirdNumber) {
@@ -37,9 +71,4 @@ public class FindMaximum {
         }
         return maximumString;
     }
-
-    //Main method
-    public static void main(String args[]) {
-        System.out.println("Welcome to findout Maximum Number");
-    }
-}
+}*/
