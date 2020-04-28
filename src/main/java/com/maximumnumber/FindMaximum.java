@@ -30,6 +30,10 @@ public class FindMaximum < V extends Comparable <V> > {
         return maximumValue;
     }
 
+    public <V extends Comparable<V>> V findMaximumValue() {
+        return (V) findMaximumValue(firstValue,secondValue,thirdValue);
+    }
+
     //Main method
     public static void main(String args[]) {
         System.out.println("Findout Maximum number");
