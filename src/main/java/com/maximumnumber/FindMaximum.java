@@ -1,42 +1,33 @@
 package com.maximumnumber;
 
+import java.util.Arrays;
+
 public class FindMaximum < V extends Comparable <V> > {
 
-    //class parameter
-    V firstValue;
-    V secondValue;
-    V thirdValue;
+    // Array of Values
+    V[] valuesArray;
 
-    //Default Constructor
+    //default constructor
     public FindMaximum() {
 
     }
 
-    //Paramerized Constructor
-    public FindMaximum(V firstValue, V secondValue, V thirdValue) {
-        this.firstValue = firstValue;
-        this.secondValue = secondValue;
-        this.thirdValue = thirdValue;
+    // Generic method to find Maximum Value
+    public <V extends Comparable<V>> V findMaximumValue(V... valuesArray) {
+        Arrays.sort(valuesArray);
+        V maximumValue= valuesArray[valuesArray.length-1];
+        printMaximumValue(maximumValue);
+        return valuesArray[valuesArray.length-1];
     }
 
-    public V findMaximumValue(V firstValue, V secondValue, V thirdValue) {
-        V maximumValue = firstValue;
-        if (secondValue.compareTo(maximumValue) > 0) {
-            maximumValue = secondValue;
-        }
-        if (thirdValue.compareTo(maximumValue) > 0) {
-            maximumValue = thirdValue;
-        }
-        return maximumValue;
+    // Generic Method to Print the Maximum Value
+    private <V extends Comparable<V>> void printMaximumValue(V maximumValue) {
+        System.out.println("Maximum Value is:"+maximumValue);
     }
 
-    public <V extends Comparable<V>> V findMaximumValue() {
-        return (V) findMaximumValue(firstValue,secondValue,thirdValue);
-    }
-
-    //Main method
+    //Main Method
     public static void main(String args[]) {
-        System.out.println("Findout Maximum number");
+        System.out.println("Findout Maximum Number");
     }
 }
 
